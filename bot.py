@@ -4,14 +4,17 @@ import random
 def rline (filename):
 	with open(filename) as f:
 		lines = f.readlines()
-		print(random.choice(lines))
+		random_int = random.randint(0,len(lines)-1)
+		b = lines[random_int]
+		v = b.strip()
+		return v
     	
     	
-txts = ["users.txt","malware.txt","countries.txt","nouns.txt","animals.txt"]
+twit = rline ("users.txt")
+malware = rline("malware.txt")
+C = rline("countries.txt")
+noun = rline("nouns.txt")
+animal = rline("animals.txt")
 
-for x in txts:
-	print (rline(x))
-
-
-
-msg = "{select_random infosec influencer} + is accused of creating {select_random_malware} & working as a proxy of {Russia or Iran or North_Korea or China} as part of a APT group "
+msg = ""+twit+" is accused of creating "+malware+" & working as a proxy of "+C+" APT group known as "+noun+" "+animal+" "
+print (msg)
