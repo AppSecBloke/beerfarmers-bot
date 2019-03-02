@@ -32,6 +32,6 @@ C = rline("countries.txt")
 noun = rline("nouns.txt")
 animal = rline("animals.txt")
 
-msg = "."+twit+" is accused of creating "+malware+" & working as a proxy of "+C+" APT group known as "+noun+" "+animal+" "
+msg = "."+twit+" is rumoured to be creating / distributing "+malware+" & working as a proxy of the "+C+" APT group known as "+noun+" "+animal+" "
 print (msg)
 api.update_status(status=msg)
